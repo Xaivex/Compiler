@@ -1,0 +1,82 @@
+{
+}
+(
+)
+,
+=
+;
++
+-
+*
+/
+++
+--
+!
+&&
+||
+==
+!=
+<
+>
+<=
+>=
+<<
+>>
+
+bool
+int
+void
+true
+false
+struct
+cin
+cout
+if
+else
+while
+return
+
+"hello"
+"newline \n"
+"tab \t"
+"single quote \'"
+"double quote \""
+"question mark \?"
+"backslash \\"
+""
+"&!88"
+"use \n to denote a newline character"
+"include a quote like this \" and a backslash like this \\"
+
+// This is a comment should be ignored
+## This is a comment should be ignored
+
+_id
+6id
+id4
+id2
+id1
+id8_accd
+id9
+i_d0
+
+12345
+
+.
+
+3IDstartingwithanum
+"unterminated
+"also unterminated \"
+"backslash followed by space: \ is not allowed"
+"bad escaped character: \a "
+"bad escaped character: \a AND not terminated
+"very bad string \
+abc
+"newline after newline \n
+def
+&
+$
+%
+@
+99999999999999999999999999999999999999999999999999999
+"unterminated string because of EOF

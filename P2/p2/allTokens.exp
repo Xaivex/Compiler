@@ -1,0 +1,62 @@
+{ Line num = 1 Char num = 1 sym val = 17
+} Line num = 2 Char num = 1 sym val = 18
+( Line num = 3 Char num = 1 sym val = 19
+) Line num = 4 Char num = 1 sym val = 20
+, Line num = 5 Char num = 1 sym val = 22
+= Line num = 6 Char num = 1 sym val = 41
+; Line num = 7 Char num = 1 sym val = 21
++ Line num = 8 Char num = 1 sym val = 28
+- Line num = 9 Char num = 1 sym val = 29
+* Line num = 10 Char num = 1 sym val = 30
+/ Line num = 11 Char num = 1 sym val = 31
+++ Line num = 12 Char num = 1 sym val = 26
+-- Line num = 13 Char num = 1 sym val = 27
+! Line num = 14 Char num = 1 sym val = 32
+&& Line num = 15 Char num = 1 sym val = 33
+|| Line num = 16 Char num = 1 sym val = 34
+== Line num = 17 Char num = 1 sym val = 35
+!= Line num = 18 Char num = 1 sym val = 36
+< Line num = 19 Char num = 1 sym val = 37
+> Line num = 20 Char num = 1 sym val = 38
+<= Line num = 21 Char num = 1 sym val = 39
+>= Line num = 22 Char num = 1 sym val = 40
+<< Line num = 23 Char num = 1 sym val = 24
+>> Line num = 24 Char num = 1 sym val = 25
+bool Line num = 26 Char num = 1 sym val = 2
+int Line num = 27 Char num = 1 sym val = 3
+void Line num = 28 Char num = 1 sym val = 4
+true Line num = 29 Char num = 1 sym val = 5
+false Line num = 30 Char num = 1 sym val = 6
+struct Line num = 31 Char num = 1 sym val = 7
+cin Line num = 32 Char num = 1 sym val = 8
+cout Line num = 33 Char num = 1 sym val = 9
+if Line num = 34 Char num = 1 sym val = 10
+else Line num = 35 Char num = 1 sym val = 11
+while Line num = 36 Char num = 1 sym val = 12
+return Line num = 37 Char num = 1 sym val = 13
+"hello" Line num = 39 Char num = 1 sym val = 16
+"newline \n" Line num = 40 Char num = 1 sym val = 16
+"tab \t" Line num = 41 Char num = 1 sym val = 16
+"single quote \'" Line num = 42 Char num = 1 sym val = 16
+"double quote \"" Line num = 43 Char num = 1 sym val = 16
+"question mark \?" Line num = 44 Char num = 1 sym val = 16
+"backslash \\" Line num = 45 Char num = 1 sym val = 16
+"" Line num = 46 Char num = 1 sym val = 16
+"&!88" Line num = 47 Char num = 1 sym val = 16
+"use \n to denote a newline character" Line num = 48 Char num = 1 sym val = 16
+"include a quote like this \" and a backslash like this \\" Line num = 49 Char num = 1 sym val = 16
+_id Line num = 54 Char num = 1 sym val = 14
+6 Line num = 55 Char num = 1 sym val = 15
+id Line num = 55 Char num = 2 sym val = 14
+id4 Line num = 56 Char num = 1 sym val = 14
+id2 Line num = 57 Char num = 1 sym val = 14
+id1 Line num = 58 Char num = 1 sym val = 14
+id8_accd Line num = 59 Char num = 1 sym val = 14
+id9 Line num = 60 Char num = 1 sym val = 14
+i_d0 Line num = 61 Char num = 1 sym val = 14
+12345 Line num = 63 Char num = 1 sym val = 15
+. Line num = 65 Char num = 1 sym val = 23
+3 Line num = 67 Char num = 1 sym val = 15
+IDstartingwithanum Line num = 67 Char num = 2 sym val = 14
+def Line num = 76 Char num = 1 sym val = 14
+2147483647 Line num = 81 Char num = 1 sym val = 15

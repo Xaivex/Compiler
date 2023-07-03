@@ -1,0 +1,1 @@
+"File ends without a newline and should trigger unterminated string literal ignored.
