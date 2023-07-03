@@ -1,0 +1,240 @@
+int itest;
+int sum;
+bool btest;
+
+void testIfArithExpr() {
+    int var1;
+    int var2;
+    int x;
+    int y;
+    bool c;
+    bool f;
+    bool b1;
+    bool b2;
+    bool d;
+    
+    cout << "\n//arithmetic ops \n";
+    var1 = 4;
+    var2 = 2;
+    var1 = var1 - var2;
+    var1 = var1 + var2;
+    var1 = var1 / var2;
+    var1 = var1 * var2;
+    sum = var1 + var2;
+    cout << "var1 = 4/2 * 2: ";
+    cout << var1;
+    cout << "\n";
+
+    cout << "\n// test (<, >, <=, >=) \n";
+    cout << "5 >= 3: ";
+    cout << (5 >= 3);
+    cout << "\n";
+    cout << "1 <= 2: ";
+    cout << (1 <= 2);
+    cout << "\n";
+    cout << "7 < 4: ";
+    cout << 7 < 4;
+    cout << "\n";
+    cout << "6 > 9: ";
+    cout << 6 > 9;
+    cout << "\n";
+    
+    cout << "\n// test PostInc and PostDec \n";
+    cout << var1;
+    var1++;
+    cout << "\nvar1++: ";
+    cout << var1;
+    cout << "\n";
+    cout << var2;
+    cout << "\nvar2--: ";
+    var2--;
+    cout << var2;
+    cout << "\n";
+
+    cout << "\n// test AND \n";
+    c = true;
+    f = c && true;
+    cout << "c && true: ";
+    cout << f;
+    cout << "\n";
+    cout << "c && false: ";
+    cout << (c && false);
+    cout << "\n";
+    cout << "false && false: ";
+    cout << (false && false);
+    cout << "\n";
+
+    cout << "\n// test NOT \n";
+    cout << "\nbool type (b1 != b2): ";
+    cout << (b1 != b2);
+    cout << "\nstring type(\"hello\" != \"world\"): ";
+    cout << "hello" != "world: ";
+    cout << "\n";
+
+    cout << "\n// test OR \n";
+    c = false;
+    f = true;
+    cout << f;
+    cout << "\n";
+    d = false;
+    cout << d;
+    cout << c || d;
+    cout << "\n";
+    
+    cout << "\n// test equality \n";
+    x = 5;
+    y = 10;
+    cout << "x == y: ";
+    cout << (x == y);
+    cout << "\n";
+
+    b1 = true;
+    b2 = false;
+    cout << "b1 == b2: ";
+    cout << (b1 == b2);
+    cout << "\n";
+    return;
+}
+
+bool testIf(int a, int b) {
+    if(a != b) {
+        cout << "not equal!\n";
+        return false;
+    }
+    return true;
+}
+
+void testIfAndWhile(int j) {
+    while (j < 10) {
+        if (j < 5) {
+            cout << "j is less than 5\n";
+        } else {
+            cout << "j is greater than or equal to 5\n";
+        }
+        j++;
+    }
+    return;
+}
+
+bool testIfElseAndLargNum(int z) {
+    cout << z;
+    if (z >= 999) {
+        cout << " >= 999: true\n";
+        return true;
+    }
+    else {
+        cout << " >= 999: false\n";
+        return false;
+    }
+}
+
+void testWhile(int i) {
+    while (i <= 5) {
+        cout << i;
+        cout << "\n";
+        i++;
+    }
+    cout << "Done!\n";
+}
+
+void testNestedCondStmts(int num) {
+    if (num > 0) {
+        if (num < 5) {
+            cout << "Number is less than 5\n";
+        } else {
+            cout << "Number is greater than or equal to 5\n";
+        }
+    } else {
+        cout << "Number is negative\n";
+    }
+}
+
+void testBigLoop(int n) {
+    int sum;
+    sum = 0;
+    while (sum < n) {
+        sum ++;
+    }
+    cout << "sum = ";
+    cout << sum; 
+}
+
+int testReturnInt(int n) {
+    return n + 3;
+}
+
+bool testReturnBool(bool val) {
+    return !val;
+}
+
+int testRecursive(int n) {
+    if (n <= 0) { 
+        return n;
+    }
+    return n * testRecursive(n - 1);
+}
+
+void main(int c, bool d) {
+    cout << "\n";
+    cout <<"// test arithmetic \n";
+    testIfArithExpr();
+    
+    cout << "\n";
+    cout << "// test if \n";
+    cout << testIf(25, 3);
+    cout << "\n";
+    cout << testIf(3, 3);
+    cout << "\n";
+
+    cout << "\n";
+    cout << "// test if and while \n";
+    testIfAndWhile(7);
+
+    cout << "\n";
+    cout << "// test if else \n";
+    testIfElseAndLargNum(1200);
+    testIfElseAndLargNum(900);
+
+    cout << "\n";
+    cout << "// test while \n";
+    testWhile(2);
+
+    cout << "\n";
+    cout << "// test nested conditional stmts \n";
+    testNestedCondStmts(6);
+    testNestedCondStmts(-1);
+
+    cout << "\n";
+    cout << "// test big loop \n";
+    testBigLoop(100); 
+    cout << "\n";
+
+    cout << "\n// test int return \n";
+    cout << "2 + 3: ";
+    cout << testReturnInt(2);
+    cout << "\n";
+    
+    cout << "\n// test bool return \n";
+    cout << "!val (val == true): ";
+    cout << testReturnBool(true);
+    cout << "\n";
+
+    cout <<"\n// test recursive function \n";
+    cout << "testRecursive(0): ";
+    cout << testRecursive(0);
+    cout << "\n";
+    cout << "testRecursive(2): ";
+    cout << testRecursive(2);
+    cout << "\n";
+    cout << "testRecursive(3): ";
+    cout << testRecursive(3);
+    cout << "\n";
+    cout << "testRecursive(4): ";
+    cout << testRecursive(4);
+    cout << "\n";
+
+    cout << "Hello world!";
+    cout << "\n";
+
+    return;
+}
