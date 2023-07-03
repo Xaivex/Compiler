@@ -1,0 +1,82 @@
+int num;
+void method() {}
+
+int mulDecID;                     
+int mulDecID;                     // Multiply declared identifier
+bool mulDecID;                    // Multiply declared identifier
+int mulDecID() {}                 // Multiply declared identifier
+int mulDecID() {}                 // Multiply declared identifier
+int mulDecFunc() {}                
+int mulDecFunc() {}               // Multiply declared identifier
+int mulDecForm(int a, int a) {}   // Multiply declared identifier
+
+struct mulDecStruct1 {            
+    int mulDecID;                   
+};
+
+struct mulDecStruct2 {              
+    int mulDecID;                   
+    int mulDecID;                   // Multiply declared identifier
+    bool mulDecID;                  // Multiply declared identifier
+};              
+
+struct mulDecStruct2 {             // Multiply declared identifier
+    int mulDecID;       
+    bool mulDecID;                  // Multiply declared identifier
+};        
+
+int mulDecBody() {    
+    int mulDecVar1;                
+    int mulDecVar1;                // Multiply declared identifier
+    int mulDecVar2;       
+}
+
+int undelaredTest() {
+    int var;
+    unDecFunc();                          // Undeclared identifier
+    var = unDecFunc(var);                 // Undeclared identifier
+    unDecFunc(unDecFunc(unDecFunc()));    // Undeclared identifier 
+
+    var = unDecVar;                       // Undeclared identifier
+    unDecVar = var;                       // Undeclared identifier
+    unDecVar = unDecVar;                  // Undeclared identifier 
+    var = unDecVar + var;                 // Undeclared identifier
+    unDecVar = unDecVar - unDecVar;       // Undeclared identifier 
+    var = unDecVar * var;                 // Undeclared identifier
+    unDecVar = unDecVar / unDecVar;       // Undeclared identifier 
+}
+
+int dotAccessTest() {
+    int dot1;
+    int dot2;
+    dot1 = dot1.dot2;           // Dot-access of non-struct type
+    dot1.dot2 = dot1;           // Dot-access of non-struct type 
+    dot1 = dot1.dot2.dot3.d;    // Dot-access of non-struct type  
+    dot1 = struc.dot1;          // Dot-access of non-struct type, Undeclared identifier 
+}
+
+void var1;                          // Non-function declared void
+void var2;                          // Non-function declared void
+
+struct void_struct {              
+  void var2;                        // Non-function declared void
+};                                
+int void_formal(void var1) {        // Non-function declared void
+  void var;                         // Non-function declared void
+}
+
+struct nonExistentStruct invalStructVar;  // Invalid name of struct type
+struct unDecStruct var;                   // Invalid name of struct type
+
+struct Item {
+    int number;
+};
+
+int structFieldNameTest() {
+  struct Item varStruct;
+  var = varStruct.nonField;        // Invalid struct field name, Undeclared identifier
+  varStruct.nothing = nothing;     // Invalid struct field name, Undeclared identifier
+}
+
+
+
