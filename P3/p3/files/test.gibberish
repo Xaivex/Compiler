@@ -1,0 +1,71 @@
+int x;
+int y;
+int hi;
+void v;
+bool b;
+
+// comment
+## comment
+
+int x;bool b;void v;
+
+int main() {
+if (b == -1) { x = 4+3*5-y; while (c) { y = y*2+x; } } else { x = 0; }}
+
+struct s {
+    int a;
+    int structOne;
+    bool b;
+    void v;
+};
+
+void functionOne(int a, int b){
+	int a;
+    bool b;
+    void v;
+    a = b;
+	d++; cin >> c;	cout << t;
+	b = 5;
+			    if(statementIstrue){
+					a++;
+					b--;
+		}   else {
+				        return v;
+		}
+
+        return;
+        return blah();
+        return blah(x, blah(a, b));
+        repeat (true) {x = 1 + 2 - 10 * 5 - y;}
+}
+
+void functionTwo(){
+    struct s s;
+    result = "Hello World";
+    result = a.b.c;
+    result = 1;
+    result = true;
+    result = false;
+    result = !x;
+    result = -x;
+    result = x + 1;
+    result = x / 1;
+    result = x * 1;
+    result = x - 1;
+    result = x > 1;
+    result = x < 1;
+    result = x >= 1;
+    result = x <= 1;
+    result = x == y;
+    result = x != y;
+    result = x && y;
+    result = x || y;
+}
+
+void functionThree (int n) {
+    int a;
+    int i;while (i <= n) {if (i / 2 == 0) {
+            a = i;
+        } else {return a;
+        }       i++;}
+}
