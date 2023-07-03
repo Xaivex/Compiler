@@ -1,0 +1,155 @@
+struct Point {
+    int x;
+    int y;
+};
+
+int i;
+bool b;
+struct Point pt;
+int func(){}
+
+void data(int i){}
+void data1(){}
+void data2(int i1, int i2){}
+void data3(int i, bool b){}
+
+// for main
+struct P{ int x; int y;};
+struct P p;
+int f(){}
+void fi(int i){}
+
+void main(){
+    cout << P + 1;              // P + 1 is an error; the write is OK
+    i = (true + 3) * 4;         // true + 3 is an error; the * is OK
+    i = true && (false || 3);   // false || 3 is an error; the && is OK
+    fi("a" * 4);                // "a" * 4 is an error; the call is OK
+    i = 1 + p();                // p() is an error; the + is OK
+    b = (true + 3) == i;        // true + 3 is an error; the == is OK
+                                // regardless of the type of x
+
+    i = true + "hello";      // one error for each of the non-int operands of the +
+    i = 1 + f(true);        // one for the bad arg type and one for the 2nd operand of the +
+    i = 1 + f(1, 2);        // one for the wrong number of args and one for the 2nd operand of the +
+    return 3+true;           // in a void function: one error for the 2nd operand to +
+                             // and one for returning a value
+}
+
+void test_write(){
+    cout << func;        // Attempt to write a function
+    cout << Point;       // Attempt to write a struct name  
+    cout << pt;          // Attempt to write a struct variable  
+    cout << data(i);     // Attempt to write void
+}
+
+void test_read(){
+    cin >> func;      // Attempt to read a function
+    cin >> Point;     // Attempt to read a struct name  
+    cin >> pt;        // Attempt to read a struct variable  
+}
+
+void test_func_call(){
+    i();        // Attempt to call a non-function
+    b();        // Attempt to call a non-function
+    Point();    // Attempt to call a non-function
+    pt();       // Attempt to call a non-function
+
+    data2(i, i, i, i);     // Function call with wrong number of args 
+
+    data3(b, i);    // Type of actual does not match type of formal * 2
+    data3(i, i);    // Type of actual does not match type of formal * 1
+}
+
+int fb1(){ return b; }     // Bad return value
+int fm1(){ return; }       // Missing return value
+
+bool fbb1(){ return i; }    // Bad return value
+bool fmm1(){ return; }      // Missing return value
+
+void v1(){ return i; }       // Return with a value in a void function
+
+void test_arithmetic() {
+    int var1;
+    int var2;
+    bool b1;
+    bool b2;
+
+    var1 = b1 + var2;       // Arithmetic operator applied to non-numeric operand
+    var1 = b1 - var2;       // Arithmetic operator applied to non-numeric operand
+    var1 = b1 * var2;       // Arithmetic operator applied to non-numeric operand
+    var1 = b1 / var2;       // Arithmetic operator applied to non-numeric operand
+    b1 ++;                  // Arithmetic operator applied to non-numeric operand
+    b1 --;                  // Arithmetic operator applied to non-numeric operand
+}
+
+void test_logical() {
+    int i;
+    bool b1;
+    bool b2;
+    struct Point pt1;
+    struct Point pt2;
+
+    b2 = !i;                // Logical operator applied to non-bool operand
+    b2 = !pt2;              // Logical operator applied to non-bool operand
+    b2 = pt1 && b1;         // Logical operator applied to non-bool operand
+    b2 = b1 && i;           // Logical operator applied to non-bool operand
+    b2 = pt1 || b1;         // Logical operator applied to non-bool operand
+    b2 = b1 || i;           // Logical operator applied to non-bool operand
+}
+
+void test_relational() {
+    bool b1;
+    bool b2;
+    struct Point pt1;
+    struct Point pt2;
+
+    b2 = b1 > pt1;       // Relational operator applied to non-numeric operand * 2
+    b2 = b1 < pt1;       // Relational operator applied to non-numeric operand * 2
+    b2 = b1 <= pt1;      // Relational operator applied to non-numeric operand * 2
+    b2 = b1 >= pt1;      // Relational operator applied to non-numeric operand * 2
+}
+
+void test_if() {
+    if(i) {          // Non-bool expression used as an if condition
+        i = i; 
+    }
+}
+
+void test_while() {
+    while(i) {      // Non-bool expression used as a while condition
+        i = i; 
+    } 
+}
+
+void test_repeat() {
+    bool b1;
+
+    repeat(b1) {    // Non-integer expression used as a repeat clause
+
+    }
+}
+
+void test_mismatch() {
+    int var1;
+    bool b1;
+
+    var1 = b1;  // Type mismatch
+    b1 = var1;  // Type mismatch
+	func = b1;  // Type mismatch
+    b1 = func;  // Type mismatch
+}
+
+void test_equality_operator() {
+    bool b1;
+
+    b1 = data1() == data(i);       // Equality operator applied to void functions
+    b1 = data == data2;            // Equality operator applied to functions
+    b1 = Point == Point;           // Equality operator applied to struct names
+    b1 = pt == pt;                 // Equality operator applied to struct variables 
+} 
+
+void test_assignment() {
+    data = func;            // Function assignment
+    Point = Point;          // Struct name assignment 
+    pt = pt;                // Struct variable assignment
+}

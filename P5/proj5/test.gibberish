@@ -1,0 +1,131 @@
+struct Point {
+    int x;
+    int y;
+};
+
+int setA;
+int setB;
+bool setC;
+struct Point pt1;
+
+int data1(){}
+int data1_2() {
+    return setA; 
+}
+bool data2(){}
+bool data2_2() {
+    return setC; 
+}
+void data3(){}
+void data3_2() {
+    return; 
+}
+
+int div(int x, bool beta) { 
+    int algo;
+    algo = x * 2;
+    setA ++;
+    setB --;
+    algo = setA + x;
+    algo = setA - x;
+    algo = x - setA;
+    algo = setA * setB;
+    algo = setA / 5;
+    algo = pt1.x - setB;
+    setC = setB == x;
+    pt1.x = setA;
+    
+    if (beta) {
+        return x + 1000;
+    } else {
+        return x - 1000;
+    }
+}
+
+bool setBool(){
+    return true;
+}
+
+void general() {
+    struct Point pt;
+    int i;
+    bool bet;
+    bool a;
+    bool b;
+
+    a = true;
+    b = false;
+    b = a || b;
+    b = a && b;
+    b = b != b;
+    b = b == b;
+
+    bet = i < i;
+    bet = i > i;
+    bet = i <= i;
+    bet = i >= i;
+
+    i = 10; 
+    i = i * i;
+    i = i / i;
+    i = i + i;
+    i = i - i;
+    i++;
+    i--;
+
+    pt.x = i; 
+    pt.y = 20; 
+    bet = i == 9; 
+    div(i + pt.y*3, setBool());
+
+    cout << i;
+    cout << b;
+    cout << pt.y;
+
+    cin >> i;
+    cin >> b;
+    cin >> pt.y;
+
+    setC = i < setA;
+    setC = setB > i;
+    setC = i <= setA;
+    setC = setB >= i;
+}
+
+struct Dot {
+    struct Point d1; 
+    bool y; 
+    int num1;
+    int num2;  
+};
+
+struct Dot dot1; 
+
+bool func1(bool flag) {
+    int x;
+    bool y;
+    struct Point pt2;
+    struct Dot dot2; 
+    pt2.x = 2;
+    pt2.y = pt2.x * 2;
+    dot2.num1 = (pt2.x - pt2.y / 2);
+    dot2.num2 = - dot2.num1;
+
+    if (dot2.num1 + x > 0 && dot2.num2 < 0) {
+        pt2.x++;
+        return flag;
+    } else {
+        pt2.y--; 
+        return flag;
+    }
+}
+
+void tRepeat() {
+    int r;
+    r = 3; 
+    repeat(r) { 
+        r = r; 
+    }
+}
+
+
